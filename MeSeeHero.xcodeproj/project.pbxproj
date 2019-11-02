@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		74F8CEBF236B8DF300613AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEBE236B8DF300613AFC /* AppDelegate.swift */; };
-		74F8CEC1236B8DF300613AFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEC0236B8DF300613AFC /* ViewController.swift */; };
 		74F8CEC4236B8DF300613AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F8CEC2236B8DF300613AFC /* Main.storyboard */; };
 		74F8CEC7236B8DF400613AFC /* MeSeeHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEC5236B8DF300613AFC /* MeSeeHero.xcdatamodeld */; };
 		74F8CEC9236B8DF600613AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F8CEC8236B8DF600613AFC /* Assets.xcassets */; };
 		74F8CECC236B8DF600613AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F8CECA236B8DF600613AFC /* LaunchScreen.storyboard */; };
 		74F8CED7236B8DF600613AFC /* MeSeeHeroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CED6236B8DF600613AFC /* MeSeeHeroUITests.swift */; };
+		74F8CEE3236B937800613AFC /* HeroTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEE2236B937800613AFC /* HeroTVC.swift */; };
+		74F8CEE6236B93CF00613AFC /* HeroTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEE5236B93CF00613AFC /* HeroTVCell.swift */; };
+		74F8CEEA236B954200613AFC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEE9236B954200613AFC /* CoreDataStack.swift */; };
+		74F8CEEC236B957200613AFC /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEEB236B957200613AFC /* Item+CoreDataClass.swift */; };
+		74F8CEEE236B95C400613AFC /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEED236B95C400613AFC /* Item+CoreDataProperties.swift */; };
+		74F8CEF0236BDA1F00613AFC /* HeroType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEEF236BDA1F00613AFC /* HeroType.swift */; };
+		74F8CEF4236BF5EC00613AFC /* EditItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEF3236BF5EC00613AFC /* EditItemVC.swift */; };
+		74F8CEF6236E1A9A00613AFC /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEF5236E1A9A00613AFC /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +36,6 @@
 /* Begin PBXFileReference section */
 		74F8CEBB236B8DF300613AFC /* MeSeeHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeSeeHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F8CEBE236B8DF300613AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74F8CEC0236B8DF300613AFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74F8CEC3236B8DF300613AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74F8CEC6236B8DF300613AFC /* MeSeeHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeSeeHero.xcdatamodel; sourceTree = "<group>"; };
 		74F8CEC8236B8DF600613AFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +44,14 @@
 		74F8CED2236B8DF600613AFC /* MeSeeHeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeSeeHeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F8CED6236B8DF600613AFC /* MeSeeHeroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeSeeHeroUITests.swift; sourceTree = "<group>"; };
 		74F8CED8236B8DF600613AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74F8CEE2236B937800613AFC /* HeroTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTVC.swift; sourceTree = "<group>"; };
+		74F8CEE5236B93CF00613AFC /* HeroTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTVCell.swift; sourceTree = "<group>"; };
+		74F8CEE9236B954200613AFC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		74F8CEEB236B957200613AFC /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		74F8CEED236B95C400613AFC /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		74F8CEEF236BDA1F00613AFC /* HeroType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroType.swift; sourceTree = "<group>"; };
+		74F8CEF3236BF5EC00613AFC /* EditItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemVC.swift; sourceTree = "<group>"; };
+		74F8CEF5236E1A9A00613AFC /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +93,12 @@
 		74F8CEBD236B8DF300613AFC /* MeSeeHero */ = {
 			isa = PBXGroup;
 			children = (
-				74F8CEBE236B8DF300613AFC /* AppDelegate.swift */,
-				74F8CEC0236B8DF300613AFC /* ViewController.swift */,
-				74F8CEC2236B8DF300613AFC /* Main.storyboard */,
+				74F8CEE1236B935000613AFC /* Classes */,
+				74F8CEE4236B938200613AFC /* CoreData */,
 				74F8CEC8236B8DF600613AFC /* Assets.xcassets */,
+				74F8CEC2236B8DF300613AFC /* Main.storyboard */,
 				74F8CECA236B8DF600613AFC /* LaunchScreen.storyboard */,
 				74F8CECD236B8DF600613AFC /* Info.plist */,
-				74F8CEC5236B8DF300613AFC /* MeSeeHero.xcdatamodeld */,
 			);
 			path = MeSeeHero;
 			sourceTree = "<group>";
@@ -97,6 +110,30 @@
 				74F8CED8236B8DF600613AFC /* Info.plist */,
 			);
 			path = MeSeeHeroUITests;
+			sourceTree = "<group>";
+		};
+		74F8CEE1236B935000613AFC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				74F8CEBE236B8DF300613AFC /* AppDelegate.swift */,
+				74F8CEE2236B937800613AFC /* HeroTVC.swift */,
+				74F8CEE5236B93CF00613AFC /* HeroTVCell.swift */,
+				74F8CEEF236BDA1F00613AFC /* HeroType.swift */,
+				74F8CEF3236BF5EC00613AFC /* EditItemVC.swift */,
+				74F8CEF5236E1A9A00613AFC /* DetailVC.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		74F8CEE4236B938200613AFC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				74F8CEC5236B8DF300613AFC /* MeSeeHero.xcdatamodeld */,
+				74F8CEE9236B954200613AFC /* CoreDataStack.swift */,
+				74F8CEEB236B957200613AFC /* Item+CoreDataClass.swift */,
+				74F8CEED236B95C400613AFC /* Item+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +237,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F8CEEE236B95C400613AFC /* Item+CoreDataProperties.swift in Sources */,
+				74F8CEF0236BDA1F00613AFC /* HeroType.swift in Sources */,
+				74F8CEEC236B957200613AFC /* Item+CoreDataClass.swift in Sources */,
+				74F8CEEA236B954200613AFC /* CoreDataStack.swift in Sources */,
 				74F8CEC7236B8DF400613AFC /* MeSeeHero.xcdatamodeld in Sources */,
-				74F8CEC1236B8DF300613AFC /* ViewController.swift in Sources */,
+				74F8CEF6236E1A9A00613AFC /* DetailVC.swift in Sources */,
+				74F8CEF4236BF5EC00613AFC /* EditItemVC.swift in Sources */,
 				74F8CEBF236B8DF300613AFC /* AppDelegate.swift in Sources */,
+				74F8CEE3236B937800613AFC /* HeroTVC.swift in Sources */,
+				74F8CEE6236B93CF00613AFC /* HeroTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.MeSeeHero";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -392,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.MeSeeHero";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
