@@ -17,7 +17,7 @@ extension Item {
         return NSFetchRequest<Item>(entityName: "Item")
     }
     
-    @NSManaged public var name: Int16?
+    @NSManaged public var name: Int16
     @NSManaged public var residence: String?
     @NSManaged public var zoodiacSign: String?
     @NSManaged public var uuid: UUID?

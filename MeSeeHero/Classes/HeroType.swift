@@ -11,9 +11,9 @@ import UIKit
 
 enum HeroType: Int{
     case finn, jake, pb, marceline, iceking,lsp, bmo
-    static let allValues = [finn, jake, pb, marceline, iceking, beemo,LSP, bmo]
+    static let allValues = [finn, jake, pb, marceline, iceking, bmo,lsp, bmo]
     
-    func title() -> String{
+    func name() -> String{
         switch self {
         case .finn:
             return "Finn the Human"
@@ -49,4 +49,44 @@ enum HeroType: Int{
         case .bmo:
             return UIImage(named:"bmo")
     }
+}
+    
+    func residence() -> String{
+        switch self {
+        case .finn:
+            return "Finn the Human"
+        case .jake:
+            return "Jake the Dog"
+        case .pb:
+            return "Princess Bonnibel Bubblegum"
+        case .iceking:
+            return "Ice King"
+        case .marceline:
+            return "Marceline the Vampire Queen"
+        case .lsp:
+            return "Lumpy Space Princess"
+        case .bmo:
+            return "BMO"
+        }
+    }
+    
+    func zodiac() -> String{
+        switch self {
+        case .finn:
+            return "Finn the Human"
+        case .jake:
+            return "Jake the Dog"
+        case .pb:
+            return "Princess Bonnibel Bubblegum"
+        case .iceking:
+            return "Ice King"
+        case .marceline:
+            return "Marceline the Vampire Queen"
+        case .lsp:
+            return "Lumpy Space Princess"
+        case .bmo:
+            return "BMO"
+        }
+    }
+
 }
