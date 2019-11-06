@@ -10,7 +10,7 @@ import UIKit
 
 class DetailVC: UIViewController {
 
-    @IBOutlet weak var lastLocationLabel: UILabel!
+    @IBOutlet weak var residenceLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -20,11 +20,11 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = item?.lastSeenLocation
-        lastLocationLabel.text = item?.lastSeenLocation
-        if let name = item?.name{
+        self.title = item?.lastLocation
+        residenceLabel.text = item?.residence
+        if let name = item?.name, let data = item?.lastSnapshot{
             updateName(type: name)
-            updateImage(type: name)
+            updateSnapshot(type: data)
         }
         
         
@@ -33,10 +33,8 @@ class DetailVC: UIViewController {
     }
     
 
-    func updateImage(type: Int16){
-        if let heroType = HeroType(rawValue: Int(type)){
-            imageView.image = heroType.image()
-        }
+    func updateSnapshot(type: NSData){
+        imageView.image = UIImage(data: type as Data)
     }
     
     func updateName(type: Int16){

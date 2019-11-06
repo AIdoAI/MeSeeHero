@@ -44,12 +44,12 @@ final class CoreDataStack: NSObject {
         }
     }
     
-    func saveItem(lastLocation: String, name: Int16, zodiacSign: Int16, lastSnapshot: UIImage) {
-        
+    func saveItem(lastLocation: String, name: Int16, image: NSData, zodiacSign: Int16, lastSnapshot: NSData) {
         if let entity = NSEntityDescription.entity(forEntityName: "Item", in: context) {
             let item = NSManagedObject(entity: entity, insertInto: context)
             item.setValue(lastLocation, forKeyPath: "lastLocation")
             item.setValue(name, forKeyPath: "name")
+            item.setValue(image, forKey: "image")
             item.setValue(zodiacSign, forKey: "zodiacSign")
             item.setValue(lastSnapshot, forKeyPath: "lastSnapshot")
             do {

@@ -42,10 +42,14 @@ class HeroTVCell: UITableViewCell {
             nameLabel.text = heroType.name()
         }
     }
-    
+    /*
+    func updateZodiacSign(zodiacSign: Int16){
+            zodiacSignLabel.text = HeroType.allZodiacs[Int(zodiacSign)]
+    }
+    */
     func updateZodiacSign(type: Int16){
         if let heroType = HeroType(rawValue: Int(type)){
-            zodiacSignLabel.text = heroType.zodiac()
+            nameLabel.text = heroType.name()
         }
     }
     

@@ -11,7 +11,8 @@ import UIKit
 
 enum HeroType: Int{
     case finn, jake, pb, marceline, iceking,lsp, bmo
-    static let allValues = [finn, jake, pb, marceline, iceking, bmo,lsp, bmo]
+    static let allNames = [finn, jake, pb, marceline, iceking,lsp, bmo]
+    static let allZodiacs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     
     func name() -> String{
         switch self {
@@ -36,6 +37,7 @@ enum HeroType: Int{
         switch self {
         case .finn:
             return UIImage(named: "finn")
+            
         case .jake:
             return UIImage(named: "jake")
         case .pb:
@@ -54,39 +56,21 @@ enum HeroType: Int{
     func residence() -> String{
         switch self {
         case .finn:
-            return "Finn the Human"
+            return "Tree Fort"
         case .jake:
-            return "Jake the Dog"
+            return "Tree Fort"
         case .pb:
-            return "Princess Bonnibel Bubblegum"
+            return "Candy Kingdom"
         case .iceking:
-            return "Ice King"
+            return "Ice Kingdom"
         case .marceline:
-            return "Marceline the Vampire Queen"
+            return "Grass Lands"
         case .lsp:
-            return "Lumpy Space Princess"
+            return "Lumpy Space"
         case .bmo:
-            return "BMO"
+            return "Tree Fort"
         }
     }
-    
-    func zodiac() -> String{
-        switch self {
-        case .finn:
-            return "Finn the Human"
-        case .jake:
-            return "Jake the Dog"
-        case .pb:
-            return "Princess Bonnibel Bubblegum"
-        case .iceking:
-            return "Ice King"
-        case .marceline:
-            return "Marceline the Vampire Queen"
-        case .lsp:
-            return "Lumpy Space Princess"
-        case .bmo:
-            return "BMO"
-        }
-    }
+
 
 }

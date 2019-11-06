@@ -14,12 +14,8 @@ protocol EditItemDelegate: class{
 class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var namePicker: UIPickerView!
-    
     @IBOutlet weak var zodiacSignPicker: UIPickerView!
-    
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     
     var inputLastLocation: String?
     
@@ -27,8 +23,10 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        namePicker.delegate = self
+        namePicker.dataSource = self
+        zodiacSignPicker.delegate = self
+        zodiacSignPicker.dataSource = self
     }
     
     @IBAction func onLastLocationChange(_ sender: UITextField) {
@@ -42,9 +40,11 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
         presentingViewController?.dismiss(animated: true)
     }
     
+    
+    
     @IBAction func onAdd(_ sender: UIButton) {
-        if let title = inputLastLocation, let lastLocation = inputLastLocation{
-            CoreDataStack.shared.saveItem(lastLocation: lastLocation, name: Int16(namePicker.selectedRow(inComponent:0)), zodiacSign: Int16(zodiacSignPicker.selectedRow(inComponent: 0)), lastSnapshot: imageView.image as! UIImage)
+        if let lastLocation = inputLastLocation, let img = HeroType(rawValue: namePicker.selectedRow(inComponent:0))?.image()?.pngData() as NSData?, let data =  imageView.image?.pngData() as NSData?{
+            CoreDataStack.shared.saveItem(lastLocation: lastLocation, name: Int16(namePicker.selectedRow(inComponent:0)), image: img, zodiacSign: Int16(zodiacSignPicker.selectedRow(inComponent: 0)), lastSnapshot: data)
             delegate?.addedHeroItem()
         }
         presentingViewController?.dismiss(animated:true)
@@ -68,7 +68,6 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
         }
     }
     
-    
     @IBAction func onGalleryBtn(_ sender: UIBarButtonItem) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -80,6 +79,7 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.editedImage] as? UIImage  {
             imageView.image = image
+            print("Added")
         }
         dismiss(animated: true, completion: nil)
     }
@@ -90,4 +90,27 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
 
 }
 
+extension EditItemVC: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView.tag == 0 {
+            return HeroType.allNames.count
+        } else {
+            return HeroType.allZodiacs.count
+        }
+    }
+}
+
+extension EditItemVC: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView.tag == 0 {
+            return HeroType(rawValue: row)?.name()
+        } else {
+            return HeroType.allZodiacs[row]
+        }
+    }
+}
 
