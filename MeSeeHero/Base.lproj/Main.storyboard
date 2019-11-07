@@ -271,11 +271,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finn" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-7N-hVH">
-                                <rect key="frame" x="24" y="246" width="960" height="307"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ka0-AF-Xai">
-                                <rect key="frame" x="0.0" y="591" width="1000" height="57"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ka0-AF-Xai">
+                                <rect key="frame" x="12" y="591" width="1000" height="57"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVD-IG-3AO">
                                         <rect key="frame" x="461.5" y="0.0" width="77" height="36"/>
@@ -291,29 +288,41 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finn" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-7N-hVH">
+                                <rect key="frame" x="312" y="167" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="e86-gu-ubi"/>
+                                    <constraint firstAttribute="height" constant="400" id="kKh-Ul-IZ6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NAJ-b6-NYZ">
+                                <rect key="frame" x="386" y="316" width="100" height="102"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.72628045080000003" green="0.72629773620000004" blue="0.72628843779999996" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="bKX-6H-Ufx" firstAttribute="trailing" secondItem="NAJ-b6-NYZ" secondAttribute="trailing" constant="538" id="02Q-cf-zRa"/>
                             <constraint firstItem="Ka0-AF-Xai" firstAttribute="leading" secondItem="bKX-6H-Ufx" secondAttribute="leading" constant="12" id="3ss-QN-HNF"/>
+                            <constraint firstItem="NAJ-b6-NYZ" firstAttribute="centerY" secondItem="Amc-7N-hVH" secondAttribute="centerY" id="5iK-Eo-NiP"/>
                             <constraint firstItem="bKX-6H-Ufx" firstAttribute="trailing" secondItem="Ka0-AF-Xai" secondAttribute="trailing" constant="12" id="AHG-yt-MNJ"/>
-                            <constraint firstItem="Ka0-AF-Xai" firstAttribute="top" secondItem="Amc-7N-hVH" secondAttribute="bottom" constant="12" id="Nv4-oM-iay"/>
-                            <constraint firstItem="Amc-7N-hVH" firstAttribute="top" secondItem="bKX-6H-Ufx" secondAttribute="top" constant="176" id="U9e-cA-Yq2"/>
-                            <constraint firstItem="Amc-7N-hVH" firstAttribute="height" secondItem="T1v-KG-Kas" secondAttribute="height" multiplier="0.4" id="amj-Ve-FU5"/>
-                            <constraint firstItem="bKX-6H-Ufx" firstAttribute="trailing" secondItem="Amc-7N-hVH" secondAttribute="trailing" constant="40" id="cOC-1l-aMm"/>
-                            <constraint firstItem="Ka0-AF-Xai" firstAttribute="centerX" secondItem="Amc-7N-hVH" secondAttribute="centerX" id="ik8-xO-Wph"/>
-                            <constraint firstItem="Amc-7N-hVH" firstAttribute="leading" secondItem="bKX-6H-Ufx" secondAttribute="leading" constant="24" id="jFg-Da-KQh"/>
+                            <constraint firstItem="Ka0-AF-Xai" firstAttribute="top" secondItem="Amc-7N-hVH" secondAttribute="bottom" constant="24" id="Mbs-bR-egx"/>
+                            <constraint firstItem="bKX-6H-Ufx" firstAttribute="bottom" secondItem="Ka0-AF-Xai" secondAttribute="bottom" constant="120" id="Pkq-Ro-3ym"/>
+                            <constraint firstItem="Amc-7N-hVH" firstAttribute="centerX" secondItem="T1v-KG-Kas" secondAttribute="centerX" id="lp2-Ow-tDD"/>
+                            <constraint firstItem="NAJ-b6-NYZ" firstAttribute="leading" secondItem="bKX-6H-Ufx" secondAttribute="leading" constant="386" id="plA-HT-iXF"/>
+                            <constraint firstItem="NAJ-b6-NYZ" firstAttribute="top" secondItem="bKX-6H-Ufx" secondAttribute="top" constant="246" id="ukE-CO-gOi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bKX-6H-Ufx"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Amc-7N-hVH" id="jZR-kb-7Se"/>
+                        <outlet property="nameImage" destination="NAJ-b6-NYZ" id="tAl-n1-hZP"/>
                         <outlet property="nameLabel" destination="sVD-IG-3AO" id="0be-ce-rqN"/>
                         <outlet property="residenceLabel" destination="9uT-QP-voq" id="KyS-YQ-Vj0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXj-1p-dsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739" y="544"/>
+            <point key="canvasLocation" x="1738.4765625" y="543.75"/>
         </scene>
     </scenes>
     <resources>

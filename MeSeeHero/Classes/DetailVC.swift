@@ -16,15 +16,20 @@ class DetailVC: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     
+    @IBOutlet weak var nameImage: UIImageView!
+    
     var item: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = item?.lastLocation
         residenceLabel.text = item?.residence
-        if let name = item?.name, let data = item?.lastSnapshot{
+        if let name = item?.name, let data = item?.lastSnapshot, let nameData = item?.image{
             updateName(type: name)
             updateSnapshot(type: data)
+            updateNameImage(type: nameData)
+            imageView.addSubview(nameImage)
+            
         }
         
         
@@ -37,15 +42,15 @@ class DetailVC: UIViewController {
         imageView.image = UIImage(data: type as Data)
     }
     
+    func updateNameImage(type: NSData){
+        nameImage.image = UIImage(data: type as Data)
+    }
+    
+    
     func updateName(type: Int16){
         if let heroType = HeroType(rawValue: Int(type)){
             nameLabel.text = heroType.name()
         }
     }
-    
-
-    
-    
-
 
 }
