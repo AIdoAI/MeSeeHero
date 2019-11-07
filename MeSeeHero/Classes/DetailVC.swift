@@ -20,6 +20,9 @@ class DetailVC: UIViewController {
     
     var item: Item?
     
+    let nameViewWidth = CGFloat(50)
+    let nameViewHeight = CGFloat(50)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = item?.lastLocation
@@ -28,6 +31,23 @@ class DetailVC: UIViewController {
             updateName(type: name)
             updateSnapshot(type: data)
             updateNameImage(type: nameData)
+            //let maxX = imageView.frame.maxX-nameViewWidth
+            //let maxY = imageView.frame.maxY-nameViewHeight
+            let viewW = imageView.bounds.width
+            let viewH = imageView.bounds.height
+            let randomX = CGFloat(arc4random_uniform(UInt32(viewW)))
+            let randomY = CGFloat(arc4random_uniform(UInt32(viewH)))
+            nameImage.contentMode = .scaleAspectFill
+            nameImage.center.x = randomX/4 + nameViewWidth/2
+            nameImage.center.y = randomY/4 + nameViewHeight/2
+            
+            nameImage.frame = CGRect.init(
+                x: CGFloat(randomX),
+                y: CGFloat(randomY),
+                width: nameViewWidth,
+                height: nameViewHeight
+            )
+            
             imageView.addSubview(nameImage)
             
         }

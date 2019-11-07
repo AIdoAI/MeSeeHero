@@ -296,22 +296,17 @@
                                     <constraint firstAttribute="height" constant="400" id="kKh-Ul-IZ6"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NAJ-b6-NYZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAJ-b6-NYZ">
                                 <rect key="frame" x="462" y="333" width="100" height="102"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="102" id="XKw-ne-xaB"/>
-                                    <constraint firstAttribute="width" constant="100" id="wk2-bp-NKW"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.72628045080000003" green="0.72629773620000004" blue="0.72628843779999996" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="NAJ-b6-NYZ" firstAttribute="centerY" secondItem="T1v-KG-Kas" secondAttribute="centerY" id="0Cw-i2-f1j"/>
                             <constraint firstItem="Ka0-AF-Xai" firstAttribute="leading" secondItem="bKX-6H-Ufx" secondAttribute="leading" constant="12" id="3ss-QN-HNF"/>
                             <constraint firstItem="bKX-6H-Ufx" firstAttribute="trailing" secondItem="Ka0-AF-Xai" secondAttribute="trailing" constant="12" id="AHG-yt-MNJ"/>
                             <constraint firstItem="Ka0-AF-Xai" firstAttribute="top" secondItem="Amc-7N-hVH" secondAttribute="bottom" constant="24" id="Mbs-bR-egx"/>
                             <constraint firstItem="bKX-6H-Ufx" firstAttribute="bottom" secondItem="Ka0-AF-Xai" secondAttribute="bottom" constant="120" id="Pkq-Ro-3ym"/>
-                            <constraint firstItem="NAJ-b6-NYZ" firstAttribute="centerX" secondItem="T1v-KG-Kas" secondAttribute="centerX" id="bIa-Ti-g02"/>
                             <constraint firstItem="Amc-7N-hVH" firstAttribute="centerX" secondItem="T1v-KG-Kas" secondAttribute="centerX" id="lp2-Ow-tDD"/>
                             <constraint firstItem="Amc-7N-hVH" firstAttribute="centerY" secondItem="T1v-KG-Kas" secondAttribute="centerY" id="n5h-3c-2H7"/>
                             <constraint firstItem="Amc-7N-hVH" firstAttribute="centerX" secondItem="T1v-KG-Kas" secondAttribute="centerX" id="zpD-T0-rGl"/>
