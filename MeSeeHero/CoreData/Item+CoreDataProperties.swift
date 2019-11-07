@@ -19,7 +19,7 @@ extension Item {
     
     @NSManaged public var name: Int16
     @NSManaged public var residence: String?
-    @NSManaged public var zoodiacSign: Int16
+    @NSManaged public var zodiacSign: Int16
     @NSManaged public var uuid: UUID?
     @NSManaged public var image: NSData?
     @NSManaged public var lastSnapshot: NSData?

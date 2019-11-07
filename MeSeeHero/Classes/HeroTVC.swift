@@ -61,11 +61,11 @@ class HeroTVC: UITableViewController, EditItemDelegate {
         }
         
         if let item = CoreDataStack.shared.items[indexPath.row] as? Item {
-            
-            cell.updateName(type: item.name)
-            cell.updateResidence(type: item.name)
-            cell.updateZodiacSign(type: item.name)
-            cell.updateImage(type: item.name)
+          //  print(HeroType.allZodiacs[Int(item.zoodiacSign)])
+            cell.updateName(name: item.name)
+            cell.updateResidence(name: item.name)
+            cell.updateZodiacSign(zodiac: item.zodiacSign)
+            cell.updateImage(name: item.name)
         }
         
         return cell
@@ -115,7 +115,7 @@ class HeroTVC: UITableViewController, EditItemDelegate {
     
     // MARK: - Delegate
     
-    func addedHeroItem() {
+    func addedHeroItem(){
         tableView.reloadData()
     }
     

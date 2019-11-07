@@ -31,30 +31,35 @@ class HeroTVCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateImage(type: Int16){
-        if let heroType = HeroType(rawValue: Int(type)){
+    func updateImage(name: Int16){
+        if let heroType = HeroType(rawValue: Int(name)){
             nameImageView.image = heroType.image()
         }
     }
     
-    func updateName(type: Int16){
-        if let heroType = HeroType(rawValue: Int(type)){
+    func updateName(name: Int16){
+        if let heroType = HeroType(rawValue: Int(name)){
             nameLabel.text = heroType.name()
-        }
-    }
-    /*
-    func updateZodiacSign(zodiacSign: Int16){
-            zodiacSignLabel.text = HeroType.allZodiacs[Int(zodiacSign)]
-    }
-    */
-    func updateZodiacSign(type: Int16){
-        if let heroType = HeroType(rawValue: Int(type)){
-            nameLabel.text = heroType.name()
+           // print(HeroType.allZodiacs[Int(type)])
         }
     }
     
-    func updateResidence(type: Int16){
-        if let heroType = HeroType(rawValue: Int(type)){
+    func updateZodiacSign(zodiac: Int16){
+        if let zodiacType = ZodiacType(rawValue: Int(zodiac)){
+            zodiacSignLabel.text = zodiacType.zodiac()
+    }
+    }
+    
+    /*
+    func updateZodiacSign(zodiac: Int16){
+        if let heroType = HeroType(rawValue: Int(name)){
+            zodiacSignLabel.text = heroType.name()
+        }
+    }
+ */
+    
+    func updateResidence(name: Int16){
+        if let heroType = HeroType(rawValue: Int(name)){
             residenceLabel.text = heroType.residence()
         }
     }

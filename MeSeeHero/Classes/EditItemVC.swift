@@ -18,6 +18,7 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
     @IBOutlet weak var imageView: UIImageView!
     
     var inputLastLocation: String?
+    var inputZodiac: String?
     
     weak var delegate: EditItemDelegate?
     
@@ -43,8 +44,14 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
     
     
     @IBAction func onAdd(_ sender: UIButton) {
+        /*
+        if let lastLocation = inputLastLocation, let zodiac = HeroType.allZodiacs[zodiacSignPicker.selectedRow(inComponent:0)] as String?, let img = HeroType(rawValue: namePicker.selectedRow(inComponent:0))?.image()?.pngData() as NSData?, let data =  imageView.image?.pngData() as NSData?{
+            print(zodiac)
+            CoreDataStack.shared.saveItem(lastLocation: lastLocation, name: Int16(namePicker.selectedRow(inComponent:0)), image: img, zodiacSign: zodiac, lastSnapshot: data)
+            delegate?.addedHeroItem()
+ */
         if let lastLocation = inputLastLocation, let img = HeroType(rawValue: namePicker.selectedRow(inComponent:0))?.image()?.pngData() as NSData?, let data =  imageView.image?.pngData() as NSData?{
-            CoreDataStack.shared.saveItem(lastLocation: lastLocation, name: Int16(namePicker.selectedRow(inComponent:0)), image: img, zodiacSign: Int16(zodiacSignPicker.selectedRow(inComponent: 0)), lastSnapshot: data)
+            CoreDataStack.shared.saveItem(lastLocation: lastLocation, name: Int16(namePicker.selectedRow(inComponent:0)), image: img, zodiacSign: Int16(zodiacSignPicker.selectedRow(inComponent:0)), lastSnapshot: data)
             delegate?.addedHeroItem()
         }
         presentingViewController?.dismiss(animated:true)
@@ -112,5 +119,16 @@ extension EditItemVC: UIPickerViewDelegate {
             return HeroType.allZodiacs[row]
         }
     }
+    /*
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        if pickerView.tag == 1{
+            inputZodiac = HeroType.allZodiacs[row]
+        }
+        
+        else {
+            return
+        }
+    }
+ */
 }
 

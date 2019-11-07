@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74EBB07C2373B84600EDE420 /* ZodiacType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EBB07B2373B84600EDE420 /* ZodiacType.swift */; };
 		74F8CEBF236B8DF300613AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEBE236B8DF300613AFC /* AppDelegate.swift */; };
 		74F8CEC4236B8DF300613AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F8CEC2236B8DF300613AFC /* Main.storyboard */; };
 		74F8CEC7236B8DF400613AFC /* MeSeeHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEC5236B8DF300613AFC /* MeSeeHero.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74EBB07B2373B84600EDE420 /* ZodiacType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacType.swift; sourceTree = "<group>"; };
 		74F8CEBB236B8DF300613AFC /* MeSeeHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeSeeHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F8CEBE236B8DF300613AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F8CEC3236B8DF300613AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				74F8CEE2236B937800613AFC /* HeroTVC.swift */,
 				74F8CEE5236B93CF00613AFC /* HeroTVCell.swift */,
 				74F8CEEF236BDA1F00613AFC /* HeroType.swift */,
+				74EBB07B2373B84600EDE420 /* ZodiacType.swift */,
 				74F8CEF3236BF5EC00613AFC /* EditItemVC.swift */,
 				74F8CEF5236E1A9A00613AFC /* DetailVC.swift */,
 			);
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EBB07C2373B84600EDE420 /* ZodiacType.swift in Sources */,
 				74F8CEEE236B95C400613AFC /* Item+CoreDataProperties.swift in Sources */,
 				74F8CEF0236BDA1F00613AFC /* HeroType.swift in Sources */,
 				74F8CEEC236B957200613AFC /* Item+CoreDataClass.swift in Sources */,
