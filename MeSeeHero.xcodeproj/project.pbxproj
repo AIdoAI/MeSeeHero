@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74EBB07C2373B84600EDE420 /* ZodiacType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EBB07B2373B84600EDE420 /* ZodiacType.swift */; };
+		74EBB0802373D83B00EDE420 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 74EBB07F2373D83B00EDE420 /* logo.jpeg */; };
 		74F8CEBF236B8DF300613AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEBE236B8DF300613AFC /* AppDelegate.swift */; };
 		74F8CEC4236B8DF300613AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F8CEC2236B8DF300613AFC /* Main.storyboard */; };
 		74F8CEC7236B8DF400613AFC /* MeSeeHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74F8CEC5236B8DF300613AFC /* MeSeeHero.xcdatamodeld */; };
@@ -36,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		74EBB07B2373B84600EDE420 /* ZodiacType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZodiacType.swift; sourceTree = "<group>"; };
+		74EBB07F2373D83B00EDE420 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
+		74EBB0812373DCAE00EDE420 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		74EBB0822373DCAF00EDE420 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		74F8CEBB236B8DF300613AFC /* MeSeeHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeSeeHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F8CEBE236B8DF300613AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F8CEC3236B8DF300613AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 		74F8CEBD236B8DF300613AFC /* MeSeeHero */ = {
 			isa = PBXGroup;
 			children = (
+				74EBB07F2373D83B00EDE420 /* logo.jpeg */,
 				74F8CEE1236B935000613AFC /* Classes */,
 				74F8CEE4236B938200613AFC /* CoreData */,
 				74F8CEC8236B8DF600613AFC /* Assets.xcassets */,
@@ -203,6 +208,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 74F8CEB2236B8DF300613AFC;
 			productRefGroup = 74F8CEBC236B8DF300613AFC /* Products */;
@@ -222,6 +228,7 @@
 			files = (
 				74F8CECC236B8DF600613AFC /* LaunchScreen.storyboard in Resources */,
 				74F8CEC9236B8DF600613AFC /* Assets.xcassets in Resources */,
+				74EBB0802373D83B00EDE420 /* logo.jpeg in Resources */,
 				74F8CEC4236B8DF300613AFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +284,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74F8CEC3236B8DF300613AFC /* Base */,
+				74EBB0812373DCAE00EDE420 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				74F8CECB236B8DF600613AFC /* Base */,
+				74EBB0822373DCAF00EDE420 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -296,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -357,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

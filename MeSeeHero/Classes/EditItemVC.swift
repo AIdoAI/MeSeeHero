@@ -17,7 +17,8 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
     @IBOutlet weak var zodiacSignPicker: UIPickerView!
     @IBOutlet weak var imageView: UIImageView!
     
-    var inputLastLocation: String?
+    @IBOutlet weak var lastLocationTextField: UITextField!
+    var inputLastLocation = "empty"
     var inputZodiac: String?
     
     weak var delegate: EditItemDelegate?
@@ -28,6 +29,16 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
         namePicker.dataSource = self
         zodiacSignPicker.delegate = self
         zodiacSignPicker.dataSource = self
+    }
+    
+    func alertAction(message : String) -> Void {
+        let alert = UIAlertController.init(title: NSLocalizedString("", comment: ""), message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction.init(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default, handler: { (action) in
+            
+        }))
+        self.present(alert, animated: true) {
+            
+        }
     }
     
     @IBAction func onLastLocationChange(_ sender: UITextField) {
@@ -50,9 +61,13 @@ class EditItemVC: UIViewController, UINavigationControllerDelegate, UIImagePicke
             CoreDataStack.shared.saveItem(lastLocation: lastLocation, name: Int16(namePicker.selectedRow(inComponent:0)), image: img, zodiacSign: zodiac, lastSnapshot: data)
             delegate?.addedHeroItem()
  */
-        if let lastLocation = inputLastLocation, let img = HeroType(rawValue: namePicker.selectedRow(inComponent:0))?.image()?.pngData() as NSData?, let data =  imageView.image?.pngData() as NSData?{
+        let lastLocation = inputLastLocation
+        if let img = HeroType(rawValue: namePicker.selectedRow(inComponent:0))?.image()?.pngData() as NSData?, let data =  imageView.image?.pngData() as NSData?{
             CoreDataStack.shared.saveItem(lastLocation: lastLocation, name: Int16(namePicker.selectedRow(inComponent:0)), image: img, zodiacSign: Int16(zodiacSignPicker.selectedRow(inComponent:0)), lastSnapshot: data)
             delegate?.addedHeroItem()
+        }
+        if(lastLocation == "empty"){
+           alertAction(message: NSLocalizedString("Cannot be empty", comment: ""))
         }
         presentingViewController?.dismiss(animated:true)
     }

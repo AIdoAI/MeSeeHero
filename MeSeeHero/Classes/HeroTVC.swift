@@ -78,6 +78,27 @@ class HeroTVC: UITableViewController, EditItemDelegate {
     }
     #endif
     
+    func deletionAlert(name: Int16, completion: @escaping (UIAlertAction) -> Void) {
+        let heroType = HeroType(rawValue: Int(name))
+        let str = heroType?.name()
+          
+        let alertMsg = "Are you sure you want to delete \(String(describing: str))? This cannot be undone!"
+        let alert = UIAlertController(title: "Warning", message: alertMsg, preferredStyle: .actionSheet)
+ 
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: completion)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler:nil)
+        
+        alert.addAction(cancelAction)
+        alert.addAction(deleteAction)
+        
+        alert.popoverPresentationController?.permittedArrowDirections = []
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
+        
+        present(alert, animated: true, completion: nil)
+    }
+
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let item = CoreDataStack.shared.items[indexPath.row] as? Item {
@@ -89,31 +110,7 @@ class HeroTVC: UITableViewController, EditItemDelegate {
         }
     }
     
-    // MARK: - Deletion Alert
     
-    func deletionAlert(name:Int16, completion: @escaping (UIAlertAction) -> Void) {
-        let alertMsg = "Are you sure you want to delete \(name)? This cannot be undone!"
-        let alert = UIAlertController(title: "Warning", message: alertMsg, preferredStyle: .actionSheet)
-        
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: completion)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler:nil)
-        
-        alert.addAction(cancelAction)
-        alert.addAction(deleteAction)
-        
-        /*
-         **  In this case we need a source for the popover as well, but don't have a handy UIBarButtonItem.
-         **  As alternative we therefore use the sourceView/sourceRect combination and specify a rectangel
-         **  centered in the view of our viewController.
-         */
-        alert.popoverPresentationController?.permittedArrowDirections = []
-        alert.popoverPresentationController?.sourceView = self.view
-        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
-        
-        present(alert, animated: true, completion: nil)
-    }
-    
-    // MARK: - Delegate
     
     func addedHeroItem(){
         tableView.reloadData()

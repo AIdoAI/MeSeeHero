@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Last Location"; ObjectID = "3dr-VG-uYB"; */
+"3dr-VG-uYB.text" = "目击地点";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "7j5-JR-BM1"; */
+"7j5-JR-BM1.text" = "姓名";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9FT-uK-TOJ"; */
+"9FT-uK-TOJ.text" = "标签";
+
+/* Class = "UILabel"; text = "zodiacSugn"; ObjectID = "9uT-QP-voq"; */
+"9uT-QP-voq.text" = "星座";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "K0d-cd-56X"; */
+"K0d-cd-56X.text" = "标签";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "elq-dl-sRl"; */
+"elq-dl-sRl.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Zodiac Sign"; ObjectID = "hxa-8q-bQG"; */
+"hxa-8q-bQG.text" = "星座";
+
+/* Class = "UILabel"; text = "Last Snapshot"; ObjectID = "qw6-if-NlZ"; */
+"qw6-if-NlZ.text" = "目击照片";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "sVD-IG-3AO"; */
+"sVD-IG-3AO.text" = "姓名";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "t9B-Ca-xKE"; */
+"t9B-Ca-xKE.text" = "标签";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "uQz-EQ-Lyd"; */
+"uQz-EQ-Lyd.normalTitle" = "添加";
